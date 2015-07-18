@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Buk documentation</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/docs.min.css" rel="stylesheet" type="text/css">
+
+    <!-- IE8 support for HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom Docs Styles -->
+    <style>
+
+    .spacer {
+        height: 750px;
+    }
+    .bs-docs-header {
+        background: url('img/bg.png') center center scroll repeat;
+        color: #fff;
+    }
+	
+	
+	pre{
+		background-color: white;
+	}
+    </style>
+
+</head>
+
+<body class="top">
+
+    <!-- Docs page style -->
+    <div class="bs-docs-header" id="content">
+        <div class="container">
+            <h1 style="margin-right: 0px; margin-bottom: 20px;">Buk Documentation</h1>
+            <p>An overview of the Buk theme along with usage instructions.</p>
+        </div>
+    </div>
+
+    <div class="container bs-docs-container">
+
+        <div class="row">
+
+            <div class="col-md-9" role="main">
+
+                <div class="bs-docs-section">
+
+                    <!-- Introduction Section -->
+                    <h1 id="introduction" class="page-header">Introduction</h1>
+					<p class="lead">Buk is a unique twitter bootstrap themes for developers and freelancers.</p>
+					<p>You have downloaded buk! These docs provide usage instructions for the theme. If you run into any other problems with the theme, or encounter any bugs, please <a href="http://tutswoods.weebly.com/contact.html">contact Tutswoods directly through our website</a>.</p>
+                    <!-- What's Included Section -->
+                    <h1 id="whats-included" class="page-header">What's Included</h1>
+
+                    <h2 id="whats-included-plugins">Plugins</h2>
+					<p>Buk comes with several javascript and css plugins. Some of these plugins act as dependencies for Buk.<p>
+                    <ul>
+						<li><a href="http://tympanus.net/codrops/2012/12/11/fullscreen-pageflip-layout/">Bookblock (Fullscreen)</a> Bookblock is one of the major dependencies for buk. It is this javascript plugin that allows buk to have its page flip effect.</li>
+						<li><a href="http://jscrollpane.kelvinluck.com/">jScrollPane</a> jScrollPane is another dependencies for buk. It is used as the default scrollbar for content in buk.</li>
+						<li><a href="https://github.com/peachananr/interactive_bg">Interactive BG</a> A jQuery plugin that will let you create an interactive moving background/object that reacts to viewer's cursor.</li>
+						<li><a href="https://github.com/jquery/jquery-mousewheel">jquery-mousewheel</a> A jQuery plugin that adds cross-browser mouse wheel support.</li>
+						<li><a href="http://www.chartjs.org/">Chartjs</a> Simple HTML5 Charts using the <code>canvas</code> tag.</li>
+						<li><a href="http://jquery.malsup.com/cycle2/">Cycle2</a> Cycle2 is a versatile slideshow plugin for jQuery built around ease-of-use.</li>
+						<li><a href="https://github.com/daneden/animate.css">Animate.css</a> A cross-browser library of CSS animations. As easy to use as an easy thing.</li>
+                    </ul>
+
+ 	<div class="bs-callout bs-callout-info">
+                        <h4>Digging deeper</h4>
+						<p>You can also learn the mechanisms behind the css and javascript plugins that Buk uses so that you may use buk to the fullest, Though it is not necessary but if are serious about customizing buk then it is recommanded you go through each of these plugins - especially the Bookblock plugin, which is the backbone of Buk.</p>
+					</div>
+                    <!-- What's Included Section - Fonts -->
+                    <h2 id="whats-included-fonts">Fonts</h2>
+					<p>Buk uses the following font.</p>
+					<ul>
+						<li><a href='https://www.google.com/fonts/specimen/Lato'>Lato (100,300,400,700,900)</a></li>
+					</ul>
+                  
+				  
+                    <!-- What's Included Section - Icon packs -->
+                    <h2 id="whats-included-icon-packs">Icon packs</h2>
+                    <p>Buk uses the following icons packs</p>
+					<ul>
+						<li><a href="http://ionicons.com/">Ionicons</a></li>
+						<li><a href="http://thesabbir.github.io/simple-line-icons/">Simple line icons</a></li>
+					</ul>
+					
+					<!-- What's Included Section - Pages -->
+                    <h2 id="whats-included-pages">Pages</h2>
+                    <p>Buk comes packed with six pages, In this documentation we will go over a page structure and how to create one.</p>
+					<ul>
+						<li>Landing</li>
+						<li>Who am i</li>
+						<li>What i do</li>
+						<li>Portfolio</li>
+						<li>Get in touch</li>
+					</ul>
+					
+				<h1 id="html-structure" class="page-header">HTML structure</h1>
+				<p class="lead">We will go through how buk markup is structured.</p>
+				
+				<h2 id="main-html-structure">Main HTML structure</h2>
+				<p>We have a main container(<code>.containerbuk</code>) for all our elements. Inside, There is a division for the sidebar with the class <code>menu-panel</code>, and the wrapper for the BookBlock plugin with the class <code>bb-custom-wrapper</code>. This wrapper contains a div(<code>.bb-bookblock</code>) to which the bookblock plugin has been applied. Inside the <code>.bb-bookblock</code> div we have divs for each page with the <code>bb-item</code> class.</p>
+				<!-- HTML generated using hilite.me --><div><pre style="margin: 0; line-height: 125%"><span style="color: #333333">&lt;</span>div <span style="color: #007020">id</span><span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot;containerbuk&quot;</span> class<span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot;containerbuk&quot;</span><span style="color: #333333">&gt;</span>	
+
+ <span style="color: #333333">&lt;</span>div class<span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot;menu-panel&quot;</span><span style="color: #333333">&gt;</span>
+ 
+  <span style="color: #333333">&lt;</span>h3<span style="color: #333333">&gt;</span>Buk<span style="color: #333333">&lt;/</span>h3<span style="color: #333333">&gt;</span>
+  
+  <span style="color: #333333">&lt;</span>ul <span style="color: #007020">id</span><span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot;menu-toc&quot;</span> class<span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot;menu-toc&quot;</span><span style="color: #333333">&gt;</span>
+   
+   <span style="color: #333333">&lt;</span>li class<span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot;menu-toc-current&quot;</span><span style="color: #333333">&gt;&lt;</span>a href<span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot;#hello&quot;</span><span style="color: #333333">&gt;</span>Hello<span style="color: #333333">&lt;/</span>a<span style="color: #333333">&gt;&lt;/</span>li<span style="color: #333333">&gt;</span>
+   
+   <span style="color: #333333">&lt;</span>li<span style="color: #333333">&gt;&lt;</span>a href<span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot;#whoami&quot;</span><span style="color: #333333">&gt;</span>Who am i<span style="color: #333333">&lt;/</span>a<span style="color: #333333">&gt;&lt;/</span>li<span style="color: #333333">&gt;</span>
+   
+   <span style="color: #333333">&lt;</span>li<span style="color: #333333">&gt;&lt;</span>a href<span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot;#whatido&quot;</span><span style="color: #333333">&gt;</span>What i do<span style="color: #333333">&lt;/</span>a<span style="color: #333333">&gt;&lt;/</span>li<span style="color: #333333">&gt;</span>
+   
+   <span style="color: #333333">&lt;</span>li<span style="color: #333333">&gt;&lt;</span>a href<span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot;#portfolio&quot;</span><span style="color: #333333">&gt;</span>Portfolio<span style="color: #333333">&lt;/</span>a<span style="color: #333333">&gt;&lt;/</span>li<span style="color: #333333">&gt;</span>
+   
+   <span style="color: #333333">&lt;</span>li<span style="color: #333333">&gt;&lt;</span>a href<span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot;#contact&quot;</span><span style="color: #333333">&gt;</span>Get <span style="color: #000000; font-weight: bold">in</span> touch<span style="color: #333333">&lt;/</span>a<span style="color: #333333">&gt;&lt;/</span>li<span style="color: #333333">&gt;</span>
+  
+  <span style="color: #333333">&lt;/</span>ul<span style="color: #333333">&gt;</span>
+  
+ <span style="color: #333333">&lt;/</span>div<span style="color: #333333">&gt;</span>
+
+ <span style="color: #333333">&lt;</span>div class<span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot;bb-custom-wrapper&quot;</span><span style="color: #333333">&gt;</span>
+  
+  <span style="color: #333333">&lt;</span>div <span style="color: #007020">id</span><span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot;bb-bookblock&quot;</span> class<span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot;bb-bookblock&quot;</span><span style="color: #333333">&gt;</span>
+  
+   <span style="color: #333333">&lt;</span>div class<span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot;bb-item&quot;</span> <span style="color: #007020">id</span><span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot;hello&quot;</span><span style="color: #333333">&gt;&lt;/</span>div<span style="color: #333333">&gt;</span>
+  
+   <span style="color: #333333">&lt;</span>div class<span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot;bb-item&quot;</span> <span style="color: #007020">id</span><span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot;whoami&quot;</span><span style="color: #333333">&gt;&lt;/</span>div<span style="color: #333333">&gt;</span>
+  
+   <span style="color: #333333">&lt;</span>div class<span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot;bb-item&quot;</span> <span style="color: #007020">id</span><span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot;whatido&quot;</span><span style="color: #333333">&gt;&lt;/</span>div<span style="color: #333333">&gt;</span>
+  
+   <span style="color: #333333">&lt;</span>div class<span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot;bb-item&quot;</span> <span style="color: #007020">id</span><span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot;portfolio&quot;</span><span style="color: #333333">&gt;&lt;/</span>div<span style="color: #333333">&gt;</span>
+  
+   <span style="color: #333333">&lt;</span>div class<span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot;bb-item&quot;</span> <span style="color: #007020">id</span><span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot;contact&quot;</span><span style="color: #333333">&gt;&lt;/</span>div<span style="color: #333333">&gt;</span>
+  
+  <span style="color: #333333">&lt;/</span>div<span style="color: #333333">&gt;</span>
+  
+ <span style="color: #333333">&lt;/</span>div<span style="color: #333333">&gt;</span>
+ 
+<span style="color: #333333">&lt;/</span>div<span style="color: #333333">&gt;</span>
+</pre></div>
+
+				<h2 id="page-html-structure">Page HTML structure</h2>
+				<p>Each page has its own div with the class <code>bb-item</code>. Inside of each page, we have content wrapper(<code>.content</code>) with a div(<code>scroller</code>) that we’ll need for the custom scroll functionality(jScrollPane).</p>
+			   <!-- HTML generated using hilite.me --><div><pre style="margin: 0; line-height: 125%"><span style="color: #333333">&lt;</span>div class<span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot;bb-item&quot;</span> <span style="color: #007020">id</span><span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot;page1&quot;</span><span style="color: #333333">&gt;</span>
+ <span style="color: #333333">&lt;</span>div class<span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot;content&quot;</span><span style="color: #333333">&gt;</span>
+  <span style="color: #333333">&lt;</span>div class<span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot;scroller&quot;</span><span style="color: #333333">&gt;</span>
+   <span style="color: #333333">&lt;</span>p<span style="color: #333333">&gt;</span>This <span style="color: #333333;">is</span> a page<span style="color: #333333">&lt;/</span>p<span style="color: #333333">&gt;</span>
+  <span style="color: #333333">&lt;/</span>div<span style="color: #333333">&gt;</span>
+ <span style="color: #333333">&lt;/</span>div<span style="color: #333333">&gt;</span>
+<span style="color: #333333">&lt;/</span>div<span style="color: #333333">&gt;</span>
+</pre></div>
+
+			   		<h1 id="helper-classes" class="page-header">Helper Classes</h1>
+					<p class="lead">Helper classes help you get things done faster.</p>
+					<p>Buk comes with various different helper. Below is a table for quick reference.</p>
+			   						<table class="table">
+							<tr>
+								<th>Helper Classes</th>
+								<th>Function</th>
+							</tr>
+							<tr>
+								<td><code>.bold</code></td>
+								<td>Make text bold</td>
+							</tr>
+							<tr>
+								<td><code>.uppercase</code></td>
+								<td>Transform all characters to uppercase</td>
+							</tr>
+							<tr>
+								<td><code>.text-center</code></td>
+								<td>Center align text</td>
+							</tr>
+							<tr>
+								<td><code>.black</code></td>
+								<td>Change text color to black</td>
+							</tr>
+							<tr>
+								<td><code>.dark-color</code></td>
+								<td>Make text darker(not full black)</td>
+							</tr>
+							<tr>
+								<td><code>.hr-small</code></td>
+								<td><code>&lt;hr&gt;</code> with less width</td>
+							</tr>
+							<tr>
+								<td><code>.center</code></td>
+								<td>Center content</td>
+							</tr>
+							<tr>
+								<td><code>.spacing</code></td>
+								<td>Add margin(25px) to a div</td>
+							</tr>
+							<tr>
+								<td><code>.spacing</code></td>
+								<td>Gives space by adding margin</td>
+							</tr>
+							<tr>
+								<td><code>.mb</code></td>
+								<td>Add bottom margin</td>
+							</tr>
+							<tr>
+								<td><code>.mt</code></td>
+								<td>Add top margin</td>
+							</tr>
+							<tr>
+								<td><code>.mbzero</code></td>
+								<td>Remove bottom margin</td>
+							</tr>
+							<tr>
+								<td><code>.mtzero</code></td>
+								<td>Remove top margin</td>
+							</tr>
+							<tr>
+								<td><code>.heading-small</code></td>
+								<td>Add heading with a font size of 50px</td>
+							</tr>
+							<tr>
+								<td><code>.heading-normal</code></td>
+								<td>Change heading boldness to normal</td>
+							</tr>
+							<tr>
+								<td><code>.mt50</code></td>
+								<td>Add a top margin of 50px</td>
+							</tr>
+							<tr>
+								<td><code>.mb50</code></td>
+								<td>Add a bottom margin of 50px</td>
+							</tr>
+							<tr>
+								<td><code>.icon</code></td>
+								<td>Used for a page heading icon</td>
+							</tr>
+							<tr>
+								<td><code>.fast-animation</code></td>
+								<td>Play CSS animation without delay</td>
+							</tr>
+							<tr>
+								<td><code>.right-vertical-hr</code></td>
+								<td>Add a vertical right border, equivalent of a horizontal <code>&lt;hr&gt;</code></td>
+							</tr>
+							<tr>
+								<td><code>.leftt-vertical-hr</code></td>
+								<td>Add a vertical left border, equivalent of a horizontal <code>&lt;hr&gt;</code></td>
+							</tr>
+						</table>
+						
+						<h1 id="how-to" class="page-header">How to</h1>
+				
+				<h2 id="google-maps">How to use google maps with buk.</h2>
+				<p>Using google maps with buk is fairly easy.</p>
+				<p>Remember, you can also add google maps the way you seem fit - this is not the only way, there are no restrictions.</p>
+				<ol>
+					<li>1. Generate a map using the Google maps embed api <a href="https://developers.google.com/maps/documentation/em bed/start">from here</a>, you will need a API key in order to do this, which you can get from the <a href="https://code.google.com/apis/console">Google API console</a>.</li>
+					<li>2. Once everying is done copy the generated code into the page where you want to use it, be sure to wrap it in a div with class of <code>google-maps</code></li>
+				</ol>
+				
+				<h2 id="morphing-devices">How to use morphing devices</h2>
+				<p>The idea behind morphing devices is to show a screenshot of a website or app by applying a “device class" while using the same elements and pseudo-elements for all the devices,</p>
+							<table class="table">
+							<tr>
+								<th>Device classes</th>
+								<th>Usage code</th>
+							</tr>
+							<tr style="border: none;">
+								<td><code>.macbook</code></td>
+								<td><!-- HTML generated using hilite.me --><div><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;md-device macbook&quot;</span><span style="color: #007700">&gt;</span>
+ <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;md-border-element&quot;</span><span style="color: #007700">&gt;&lt;/div&gt;</span>
+ <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;md-base-element&quot;</span><span style="color: #007700">&gt;&lt;/div&gt;</span>
+ <span style="color: #007700">&lt;img</span> <span style="color: #0000CC">src=</span><span style="background-color: #fff0f0">&quot;app-or-website-screenshot.png&quot;</span><span style="color: #007700">&gt;</span>
+<span style="color: #007700">&lt;/div&gt;</span>
+</pre></div>
+</t>
+							</tr>
+							<tr>
+								<td><code>.imac</code></td>
+								<td><!-- HTML generated using hilite.me --><div><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;md-device imac&quot;</span><span style="color: #007700">&gt;</span>
+ <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;md-border-element&quot;</span><span style="color: #007700">&gt;&lt;/div&gt;</span>
+ <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;md-base-element&quot;</span><span style="color: #007700">&gt;&lt;/div&gt;</span>
+ <span style="color: #007700">&lt;img</span> <span style="color: #0000CC">src=</span><span style="background-color: #fff0f0">&quot;app-or-website-screenshot.png&quot;</span><span style="color: #007700">&gt;</span>
+<span style="color: #007700">&lt;/div&gt;</span>
+</pre></div>
+</td>
+							</tr>
+							<tr>
+								<td><code>.iphone</code></td>
+								<td><!-- HTML generated using hilite.me --><div><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;md-device iphone&quot;</span><span style="color: #007700">&gt;</span>
+ <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;md-border-element&quot;</span><span style="color: #007700">&gt;&lt;/div&gt;</span>
+ <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;md-base-element&quot;</span><span style="color: #007700">&gt;&lt;/div&gt;</span>
+ <span style="color: #007700">&lt;img</span> <span style="color: #0000CC">src=</span><span style="background-color: #fff0f0">&quot;app-or-website-screenshot.png&quot;</span><span style="color: #007700">&gt;</span>
+<span style="color: #007700">&lt;/div&gt;</span>
+</pre></div>
+</td>
+							</tr>
+							<tr>
+								<td><code>.ipad</code></td>
+								<td><!-- HTML generated using hilite.me --><div><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;md-device ipad&quot;</span><span style="color: #007700">&gt;</span>
+ <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;md-border-element&quot;</span><span style="color: #007700">&gt;&lt;/div&gt;</span>
+ <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;md-base-element&quot;</span><span style="color: #007700">&gt;&lt;/div&gt;</span>
+ <span style="color: #007700">&lt;img</span> <span style="color: #0000CC">src=</span><span style="background-color: #fff0f0">&quot;app-or-website-screenshot.png&quot;</span><span style="color: #007700">&gt;</span>
+<span style="color: #007700">&lt;/div&gt;</span>
+</pre></div>
+</td>
+							</tr>
+							</table>
+							
+							<h3>Using morphing devices in portfolio</h3>
+							<p>Using morphing devices in the portfolio page is fairly simple. You need to change the value of the <code>data-devicewrapper</code> attribute to the device wrapper you want to use and also change the value of the <code>data-largesrc</code> attribute to the screenshot image URL.</p>
+								<table class="table">
+							<tr>
+								<th>data-devicewrapper value</th>
+								<th>Function</th>
+							</tr>
+							<tr>
+								<td><code>imac</code></td>
+								<td>Use imac as morphing device</td>
+							</tr>
+							<tr>
+								<td><code>macbook</code></td>
+								<td>Use macbook as morphing device</td>
+							</tr>
+							<tr>
+								<td><code>ipad</code></td>
+								<td>Use ipad as morphing device</td>
+							</tr>
+							<tr>
+								<td><code>iphone</code></td>
+								<td>Use iphone as morphing device</td>
+							</tr>
+							</table>
+							
+						<h2 id="social-icons">How to use social icons</h2>
+						<p>Buk also comes with social icons out of the box, Below are code snippets for each of the social icon.</p>
+							<table class="table">
+							<tr>
+								<th>Icon</th>
+								<th>Code</th>
+							</tr>
+							<tr>
+								<td>Github</td>
+								<td><!-- HTML generated using hilite.me --><div><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-item&quot;</span><span style="color: #007700">&gt;</span>
+ <span style="color: #007700">&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-icon--github&quot;</span><span style="color: #007700">&gt;&lt;i</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;icon--github&quot;</span><span style="color: #007700">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span style="color: #007700">&lt;/div&gt;</span>
+</pre></div>
+</td>
+							</tr>
+							<tr>
+								<td>Vimeo</td>
+								<td><!-- HTML generated using hilite.me --><div><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-item&quot;</span><span style="color: #007700">&gt;</span>
+ <span style="color: #007700">&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-icon--vimeo&quot;</span><span style="color: #007700">&gt;&lt;i</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;icon--vimeo&quot;</span><span style="color: #007700">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span style="color: #007700">&lt;/div&gt;</span>
+</pre></div>
+</td>
+							</tr>
+							<tr>
+								<td>Twitter</td>
+								<td><!-- HTML generated using hilite.me --><div><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-item&quot;</span><span style="color: #007700">&gt;</span>
+ <span style="color: #007700">&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-icon--twitter&quot;</span><span style="color: #007700">&gt;&lt;i</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;icon--twitter&quot;</span><span style="color: #007700">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span style="color: #007700">&lt;/div&gt;</span>
+</pre></div>
+</td>
+							</tr>
+							<tr>
+								<td>Facebook</td>
+								<td><!-- HTML generated using hilite.me --><div><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-item&quot;</span><span style="color: #007700">&gt;</span>
+ <span style="color: #007700">&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-icon--facebook&quot;</span><span style="color: #007700">&gt;&lt;i</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;icon--facebook&quot;</span><span style="color: #007700">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span style="color: #007700">&lt;/div&gt;</span>
+</pre></div>
+</td>
+							</tr>
+							<tr>
+								<td>Google plus</td>
+								<td><!-- HTML generated using hilite.me --><div><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-item&quot;</span><span style="color: #007700">&gt;</span>
+ <span style="color: #007700">&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-icon--googleplus&quot;</span><span style="color: #007700">&gt;&lt;i</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;icon--googleplus&quot;</span><span style="color: #007700">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span style="color: #007700">&lt;/div&gt;</span>
+</pre></div>
+</td>
+							</tr>
+							<tr>
+								<td>Pintrest</td>
+								<td><!-- HTML generated using hilite.me --><div><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-item&quot;</span><span style="color: #007700">&gt;</span>
+ <span style="color: #007700">&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-icon--pintrest&quot;</span><span style="color: #007700">&gt;&lt;i</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;icon--pintrest&quot;</span><span style="color: #007700">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span style="color: #007700">&lt;/div&gt;</span>
+</pre></div>
+</td>
+							</tr>
+							<tr>
+								<td>Linkedin</td>
+								<td><!-- HTML generated using hilite.me --><div><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-item&quot;</span><span style="color: #007700">&gt;</span>
+ <span style="color: #007700">&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-icon--linkedin&quot;</span><span style="color: #007700">&gt;&lt;i</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;icon--linkedin&quot;</span><span style="color: #007700">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span style="color: #007700">&lt;/div&gt;</span>
+</pre></div>
+</td>
+							</tr>
+							<tr>
+								<td>Dribble</td>
+								<td><!-- HTML generated using hilite.me --><div><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-item&quot;</span><span style="color: #007700">&gt;</span>
+ <span style="color: #007700">&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-icon--dribble&quot;</span><span style="color: #007700">&gt;&lt;i</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;icon--dribble&quot;</span><span style="color: #007700">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span style="color: #007700">&lt;/div&gt;</span>
+</pre></div>
+</td>
+							</tr>
+							<tr>
+								<td>Stumbleupon</td>
+								<td><!-- HTML generated using hilite.me --><div><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-item&quot;</span><span style="color: #007700">&gt;</span>
+ <span style="color: #007700">&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-icon--stumbleupon&quot;</span><span style="color: #007700">&gt;&lt;i</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;icon--stumbleupon&quot;</span><span style="color: #007700">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span style="color: #007700">&lt;/div&gt;</span>
+</pre></div>
+</td>
+							</tr>
+							<tr>
+								<td>Lastfm</td>
+								<td><!-- HTML generated using hilite.me --><div><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-item&quot;</span><span style="color: #007700">&gt;</span>
+ <span style="color: #007700">&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-icon--lastfm&quot;</span><span style="color: #007700">&gt;&lt;i</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;icon--lastfm&quot;</span><span style="color: #007700">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span style="color: #007700">&lt;/div&gt;</span>
+</pre></div>
+</td>
+							</tr>
+							<tr>
+								<td>Instagram</td>
+								<td><!-- HTML generated using hilite.me --><div><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-item&quot;</span><span style="color: #007700">&gt;</span>
+ <span style="color: #007700">&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-icon--instagram&quot;</span><span style="color: #007700">&gt;&lt;i</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;icon--instagram&quot;</span><span style="color: #007700">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span style="color: #007700">&lt;/div&gt;</span>
+</pre></div>
+</td>
+							</tr>
+							<tr>
+								<td>Dropbox</td>
+								<td><!-- HTML generated using hilite.me --><div><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-item&quot;</span><span style="color: #007700">&gt;</span>
+ <span style="color: #007700">&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-icon--dropbox&quot;</span><span style="color: #007700">&gt;&lt;i</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;icon--dropbox&quot;</span><span style="color: #007700">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span style="color: #007700">&lt;/div&gt;</span>
+</pre></div>
+</td>
+							</tr>
+							<tr>
+								<td>Picasa</td>
+								<td><!-- HTML generated using hilite.me --><div><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-item&quot;</span><span style="color: #007700">&gt;</span>
+ <span style="color: #007700">&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-icon--picasa&quot;</span><span style="color: #007700">&gt;&lt;i</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;icon--picasa&quot;</span><span style="color: #007700">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span style="color: #007700">&lt;/div&gt;</span>
+</pre></div>
+</td>
+							</tr>
+							<tr>
+								<td>Soundcloud</td>
+								<td><!-- HTML generated using hilite.me --><div><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-item&quot;</span><span style="color: #007700">&gt;</span>
+ <span style="color: #007700">&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-icon--soundcloud&quot;</span><span style="color: #007700">&gt;&lt;i</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;icon--soundcloud&quot;</span><span style="color: #007700">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span style="color: #007700">&lt;/div&gt;</span>
+</pre></div>
+</td>
+							</tr>
+							<tr>
+								<td>Behance</td>
+								<td><!-- HTML generated using hilite.me --><div><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-item&quot;</span><span style="color: #007700">&gt;</span>
+ <span style="color: #007700">&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-icon--behance&quot;</span><span style="color: #007700">&gt;&lt;i</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;icon--behance&quot;</span><span style="color: #007700">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span style="color: #007700">&lt;/div&gt;</span>
+</pre></div>
+</td>
+							</tr>
+							<tr>
+								<td>Skype</td>
+								<td><!-- HTML generated using hilite.me --><div><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-item&quot;</span><span style="color: #007700">&gt;</span>
+ <span style="color: #007700">&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-icon--skype&quot;</span><span style="color: #007700">&gt;&lt;i</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;icon--skype&quot;</span><span style="color: #007700">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span style="color: #007700">&lt;/div&gt;</span>
+</pre></div>
+</td>
+							</tr>
+							<tr>
+								<td>Flickr</td>
+								<td><!-- HTML generated using hilite.me --><div><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-item&quot;</span><span style="color: #007700">&gt;</span>
+ <span style="color: #007700">&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-icon--flickr&quot;</span><span style="color: #007700">&gt;&lt;i</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;icon--flickr&quot;</span><span style="color: #007700">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span style="color: #007700">&lt;/div&gt;</span>
+</pre></div>
+</td>
+							</tr>
+							<tr>
+								<td>RSS</td>
+								<td><!-- HTML generated using hilite.me --><div><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-item&quot;</span><span style="color: #007700">&gt;</span>
+ <span style="color: #007700">&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;social-icon--rss&quot;</span><span style="color: #007700">&gt;&lt;i</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;icon--rss&quot;</span><span style="color: #007700">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span style="color: #007700">&lt;/div&gt;</span>
+</pre></div>
+</td>
+							</tr>
+							</table>
+							
+						<h2 id="buttons">How to use buttons</h2>
+						<p>Using the buttons that come with buk is simple. There is a main button class known as <code>.btn-theme</code> and various other button color classes. In order to use a button you must first apply the main button class and then the color button class. Say for exmaple, you want to have a green button your code would be;</p>
+						<!-- HTML generated using hilite.me --><div><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;btn-theme btn-green&quot;</span><span style="color: #007700">&gt;</span>
+ I&#39;m a button
+<span style="color: #007700">&lt;/div&gt;</span>
+</pre></div>
+
+	<table class="table">
+							<tr>
+								<th>Button color classes</th>
+							</tr>
+							<tr>
+								<td><code>.btn-red</code></td>
+							</tr>
+							<tr>
+								<td><code>.btn-blue</code></td>
+							</tr>
+							<tr>
+								<td><code>.btn-light-blue</code></td>
+							</tr>
+							<tr>
+								<td><code>.btn-green</code></td>
+							</tr>
+							
+							<tr>
+								<td><code>.btn-yellow</code></td>
+							</tr>
+							</table>
+	<table class="table">
+							<tr>
+								<th>Button helper classes</th>
+							</tr>
+							<tr>
+								<td><code>.btn-no-transition</code></td>
+							</tr>
+							<tr>
+								<td><code>.btn-litte-radius</code></td>
+							</tr>
+							<tr>
+								<td><code>.btn-very-litte-radius</code></td>
+							</tr>
+							<tr>
+								<td><code>.btn-more-radius</code></td>
+							</tr>
+							<tr>
+								<td><code>.btn-big</code></td>
+							</tr>
+					</table>
+					
+											<h2 id="background">How to change landing background</h2>
+											<p>To change the landing background of the 'hello' page you must change the value of the <code>data-ibg-bg</code> attribute - which is applied on the <code>.bb-item</code> div of the 'hello' page. The <code>data-ibg-bg</code> attribute must reflect the location of the image you want to use as your background. For example, if your image is on the root folder and is called "background.png", change the attribute to "/background.png".</p>
+
+			   </div>
+                <!-- /.bs-docs-section -->
+
+            </div>
+			
+            <!-- /.col-md-9 -->
+
+            <div class="col-md-3">
+                <div class="bs-docs-sidebar">
+                    <ul class="nav bs-docs-sidenav">
+                        <li>
+                            <a href="#introduction">Introduction</a>
+                        </li>
+                        <li>
+                            <a href="#whats-included">What's Included</a>
+                            <ul class="nav">
+                                <li>
+                                    <a href="#whats-included-plugins">Plugins</a>
+                                </li>
+                                <li>
+                                    <a href="#whats-included-fonts">Fonts</a>
+                                </li>
+                                <li>
+                                    <a href="#whats-included-icon-packs">Icon packs</a>
+                                </li>
+								  <li>
+                                    <a href="#whats-included-pages">Pages</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#html-structure">HTML structure</a>
+							  <ul class="nav">
+                                <li>
+                                    <a href="#main-html-structure">Main HTML structure</a>
+                                </li>
+                                <li>
+                                    <a href="#page-html-structure">Page html structure</a>
+                                </li>
+                            </ul>
+                        </li>
+						<li>
+                            <a href="#helper-classes">Helper classes</a>
+						</li>
+						<li>
+                            <a href="#how-to">How to</a>
+							  <ul class="nav">
+                                <li>
+                                    <a href="#google-maps">Use google maps</a>
+                                </li>
+								<li>
+                                    <a href="#morphing-devices">Use morphing devices</a>
+                                </li>
+								<li>
+                                    <a href="#social-icons">Use social icons</a>
+                                </li>
+								<li>
+                                    <a href="#buttons">Use buttons</a>
+                                </li>
+								<li>
+                                    <a href="#background">Change landing background</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a class="back-to-top" href="#top">Back to top</a>
+                </div>
+            </div>
+            <!-- /.col-md-3 -->
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Core Scripts -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/docs.min.js"></script>
+
+
+</body>
+
+</html>

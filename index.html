@@ -1,0 +1,503 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Buk theme</title>
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.css">
+		<link rel="stylesheet" type="text/css" href="buk/css/jquery.jscrollpane.custom.css" />
+		<link rel="stylesheet" type="text/css" href="buk/css/bookblock.css" />
+		<link rel="stylesheet" href="buk/css/animate.css">
+		<link rel="stylesheet" href="buk/css/ionicons.min.css">
+		<link rel="stylesheet" href="buk/css/simple-line-icons.css">
+		<link rel="stylesheet" type="text/css" href="buk/css/buk.css" />
+		<script src="buk/js/modernizr.js"></script>
+	</head>
+	
+	<body>
+	
+	<div id="preloader">
+		<div id="loading" class="animated bounceIn"><div></div><div></div><div></div><div></div><div></div></div>
+	</div>
+
+		<div id="containerbuk" class="containerbuk">	
+			<!-- Landing background image location has to be reflected below for preloading -->
+			<img src="buk/img/header-bg.jpg" style="display: none;">
+			<div class="menu-panel">
+				<h3>Buk</h3>
+				<ul id="menu-toc" class="menu-toc">
+					<li class="menu-toc-current"><a href="#hello">Hello</a></li>
+					<li><a href="#whoami">Who am i</a></li>
+					<li><a href="#whatido">What i do</a></li>
+					<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#contact">Get in touch</a></li>
+				</ul>
+			</div>
+			
+			<div class="bb-custom-wrapper"><!--bb-custom-wrapper (START) -->
+				<div id="bb-bookblock" class="bb-bookblock"><!--bb-bookblock (START) -->
+													<!-- NOTE: Also change the source location of the img element at line 27 to the location of the landing background image for preloading! -->
+					<div class="bb-item" id="hello" data-ibg-bg="buk/img/header-bg.jpg"><!-- Section intro (START) -->
+													<!-- NOTE: Also change the source location of the img element at line 27 to the location of the landing background image for preloading! -->
+						<div class="content">
+							<div class="scroller">
+							
+								<div class="landing">
+									<div class="animated zoomInDown" >
+										<img src="images/thumbs/thumb.jpg" class="me-thumb">
+										<h1 classs="uppercase">Hello, I'm</h1>
+										<h3 class="typographic-effect-1">
+											<a href="#"><span class="char1">J</span><span class="char2">o</span><span class="char3">o</span><span class="char4">k</span></a>
+											<a href="#"><span class="char1">D</span><span class="char2">o</span><span class="char3">e</span></a>
+										</h3>
+										<h3 class="typographic-effect-fallback-mobile">Muneeb khan</h3>
+										<br>
+										<div class="social-item">
+											<a href="" class="social-icon--pintrest"><i class="icon--pintrest"></i></a>
+										</div>
+										<div class="social-item">
+											<a href="" class="social-icon--twitter"><i class="icon--twitter"></i></a>
+										</div>
+										<div class="social-item">
+											<a href="" class="social-icon--github"><i class="icon--github"></i></a>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div><!-- Section intro (END) -->
+					
+					<div class="bb-item" id="whoami"><!-- Section - Who am i (START) -->
+						<div class="content">
+							<div class="scroller">
+							
+								<div class="text-center">
+									<h1><i class="ion-ios-help-outline"></i></h1>
+									<h1 class="uppercase">Who am i</h1>
+									<h2 class="uppercase">A programmer who loves to code and design</h2>
+									<hr class="hr-small center">
+								</div>						
+
+								<div class="container">
+									<div class="row">
+										<div class="col-md-8 col-md-offset-2">
+											<p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+												<h3 class="text-center">What do they say about me</h3>
+												<br>
+												<div class="testimonials cycle-slideshow"  data-cycle-swipe="true" data-cycle-fx="scrollHorz" data-cycle-timeout="2000" data-cycle-slides="> div">
+												<div>
+													<blockquote><p>John is a very creative developer you probably haven't heard of. Lorem ipsum dolor met consectetur adipisicing sit amet, consectetur adipisicing elit, of them jean shorts sed magna aliqua. Lorem ipsum dolor met.</p></blockquote>
+													<div class="carousel-info">
+														<img alt="" src="images/thumbs/thumb.jpg" class="pull-left">
+														<div class="pull-left">
+															<span class="testimonials-name">Lina Mars</span>
+															<span class="testimonials-post">Commercial Director</span>
+														</div>
+													</div>
+												</div>
+												<div>
+													<blockquote><p>John always does his best. Lorem ipsum dolor met consectetur adipisicing sit amet, consectetur adipisicing elit, of them jean shorts sed magna aliqua. Lorem ipsum dolor met.</p></blockquote>
+													<div class="carousel-info">
+														<img alt="" src="images/thumbs/testio.jpg" class="pull-left">
+														<div class="pull-left">
+															<span class="testimonials-name">Lina Mars</span>
+															<span class="testimonials-post">Commercial Director</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="text-center">
+											<h3>My skills</h3>
+											<br><br>
+											<div class="col-lg-2 col-lg-offset-3">
+												<canvas id="javascript" height="130" width="130" style="width: 130px; height: 130px;" class="animated fast-animation zoomInDown text-center"></canvas>
+												<br>
+												<h4>Joomla</h4>
+												<br>
+											</div>
+											<div class="col-lg-2">
+												<canvas id="bootstrap" height="130" width="130" style="width: 130px; height: 130px;" class="animated fast-animation zoomInDown text-center"></canvas>
+												<br>
+												<h4>Bootstrap</h4>
+												<br>
+											</div>
+											<div class="col-lg-2">
+												<canvas id="wordpress" height="130" width="130" style="width: 130px; height: 130px;" class="animated fast-animation zoomInDown text-center"></canvas>
+												<br>
+												<h4>Wordpress</h4>
+												<br>
+											</div>
+										</div>
+									</div>
+									
+								</div>		
+							</div>
+						</div>
+					</div><!-- Section - Who am i (END) -->
+					
+					<div class="bb-item" id="whatido"><!-- Section - What i do (START) -->
+						<div class="content">
+							<div class="scroller">
+							
+								<h1 class="text-center"><i class="ion-ios-timer-outline"></i></h1>
+								<h1 class="text-center uppercase">What i do</h1>
+								<hr class="hr-small center">
+								
+								<div class="container">
+									<ul class="ca-menu">
+										<li class="animated fadeInLeft">
+											<a href="#">
+												<span class="ca-icon"><i class="icon-screen-desktop"></i></span>
+												<div class="ca-content">
+													<h2 class="ca-main">Web development</h2>
+													<h3 class="ca-sub">Personalized to your needs</h3>
+												</div>
+											</a>
+										</li>
+										<li class="animated fadeInLeft">
+											<a href="#">
+												<span class="ca-icon"><i class="icon-badge"></i></span>
+												<div class="ca-content">
+													<h2 class="ca-main">Company branding</h2>
+													<h3 class="ca-sub">Lorem ipsum</h3>
+												</div>
+											</a>
+										</li>
+										<li class="animated fadeIn">
+											<a href="#">
+												<span class="ca-icon"><i class="icon-question"></i></span>
+												<div class="ca-content">
+													<h2 class="ca-main">Consultation and advice</h2>
+													<h3 class="ca-sub">Lorem ipsum</h3>
+												</div>
+											</a>
+										</li>
+										<li class="animated fadeInRight">
+											<a href="#">
+												<span class="ca-icon"><i class="ion-ios-color-wand-outline"></i></span>
+												<div class="ca-content">
+													<h2 class="ca-main">Artist and designer</h2>
+													<h3 class="ca-sub">Professionals in action</h3>
+												</div>
+											</a>
+										</li>
+										<li class="animated fadeInRight">
+											<a href="#">
+												<span class="ca-icon"><i class="ion-ios-book-outline"></i></span>
+												<div class="ca-content">
+													<h2 class="ca-main">Book writer</h2>
+													<h3 class="ca-sub">Lorem ipsum</h3>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+								
+								<div class="container-fluid">
+									<div class="row mt50 mb50">
+										<div class="col-md-1 text-center">
+											<i class="icon ion-ios-compose-outline"></i>
+										</div>
+										<div class="col-md-3 showcase">
+											<h3 class="uppercase">I write books</h3>
+											<hr>
+											<p>Lorem ipsum doloar is met. Lorem ipsum doloar is met. Lorem ipsum doloar is met.</p>
+										</div>
+									
+										<div class="col-md-1 text-center">
+											<i class="icon ion-ios-color-wand-outline"></i>
+										</div>
+										<div class="col-md-3 showcase">
+											<h3 class="uppercase">I code websites and apps</h3>
+											<hr>
+											<p>Lorem ipsum doloar is met. Lorem ipsum doloar is met. Lorem ipsum doloar is met.</p>
+										</div>
+									
+										<div class="col-md-1 text-center">
+											<i class="icon ion-ios-help-outline"></i>
+										</div>
+										<div class="col-md-3 showcase">
+											<h3 class="uppercase">I advise people</h3>
+											<hr>
+											<p>Lorem ipsum doloar is met. Lorem ipsum doloar is met. Lorem ipsum doloar is met.</p>
+										</div>
+										
+										<div class="col-md-1 text-center">
+											<i class="icon ion-ios-game-controller-b-outline"></i>
+										</div>
+										<div class="col-md-3 showcase">
+											<h3 class="uppercase">I create games</h3>
+											<hr>
+											<p>Lorem ipsum doloar is met. Lorem ipsum doloar is met. Lorem ipsum doloar is met.</p>
+										</div>
+
+										<div class="col-md-1 text-center">
+											<i class="icon ion-ios-analytics-outline"></i>
+										</div>
+										<div class="col-md-3 showcase">
+											<h3 class="uppercase">I am passionate</h3>
+											<hr>
+											<p>Lorem ipsum doloar is met. Lorem ipsum doloar is met. Lorem ipsum doloar is met.</p>
+										</div>
+									
+										<div class="col-md-1 text-center">
+											<i class="icon ion-ios-heart-outline"></i>
+										</div>
+										<div class="col-md-3 showcase">
+											<h3 class="uppercase">I love what i do</h3>
+											<hr>
+											<p>Lorem ipsum doloar is met. Lorem ipsum doloar is met. Lorem ipsum doloar is met.</p>
+										</div>
+									</div>
+									
+									<center><div onClick="goToPage(5);" class="btn-theme btn-green btn-big">I'm available, Hire me now</div></center>
+									<div class="mb50"></div>
+										
+								</div>
+							</div>
+						</div>
+					</div><!-- Section - What i do (END) -->
+					
+					<div class="bb-item" id="portfolio"><!-- Section - Portfolio (START) -->
+						<div class="content">
+						
+							<div class="scroller">
+								<h1 class="text-center"><i class="ion-ios-box-outline"></i></h1>
+								<h1 class="uppercase text-center">Portfolio</h1>
+								<h2 class="uppercase text-center">Stuff that i built</h2>
+								<hr class="hr-small center">
+							</div>
+
+							<ul id="og-grid" class="og-grid">
+								<li>
+									<a href="" data-largesrc="images/1.jpg" data-title="Trophy application" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." data-devicewrapper="macbook">
+										<img src="images/thumbs/1.jpg" alt="img01"/>
+									</a>
+								</li>
+									
+								<li>
+									<a href="" data-largesrc="images/2.jpg" data-title="Circle App" data-description="sage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." data-devicewrapper="iphone iphone-portfolio">
+										<img src="images/thumbs/2.jpg" alt="img02"/>
+									</a>
+								</li>
+								<li>
+									<a href="" data-largesrc="images/3.jpg" data-title="Old Age" data-description="sage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." data-devicewrapper="ipad">
+										<img src="images/thumbs/3.jpg" alt="img03"/>
+									</a>
+								</li>
+								<li>
+									<a href="" data-largesrc="images/4.jpg" data-title="New Age" data-description="sage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." data-devicewrapper="imac">
+										<img src="images/thumbs/4.jpg" alt="img04"/>
+									</a>
+								</li>
+								
+				
+								<li>
+									<a href="" data-largesrc="images/2.jpg" data-title="Circle App" data-description="sage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." data-devicewrapper="iphone iphone-portfolio">
+										<img src="images/thumbs/2.jpg" alt="img02"/>
+									</a>
+								</li>
+								<li>
+									<a href="" data-largesrc="images/3.jpg" data-title="Old Age" data-description="sage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." data-devicewrapper="ipad">
+										<img src="images/thumbs/3.jpg" alt="img03"/>
+									</a>
+								</li>
+								<li>
+									<a href="" data-largesrc="images/5.jpg" data-title="New Age" data-description="sage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." data-devicewrapper="ipad ipad-portfolio">
+										<img src="images/thumbs/5.jpg" alt="img05"/>
+									</a>
+								</li>
+								<li>
+									<a href="" data-largesrc="images/1.jpg" data-title="Trophy application" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." data-devicewrapper="macbook">
+										<img src="images/thumbs/1.jpg" alt="img01"/>
+									</a>
+								</li>
+								
+								<li>
+									<a href="" data-largesrc="images/4.jpg" data-title="New Age" data-description="sage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." data-devicewrapper="imac">
+										<img src="images/thumbs/4.jpg" alt="img04"/>
+									</a>
+								</li>
+								<li>
+									<a href="" data-largesrc="images/1.jpg" data-title="Trophy application" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." data-devicewrapper="macbook">
+										<img src="images/thumbs/1.jpg" alt="img01"/>
+									</a>
+								</li>
+								<li>
+									<a href="" data-largesrc="images/2.jpg" data-title="Circle App" data-description="sage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." data-devicewrapper="iphone iphone-portfolio">
+										<img src="images/thumbs/2.jpg" alt="img02"/>
+									</a>
+								</li>
+								<li>
+									<a href="" data-largesrc="images/5.jpg" data-title="New Age" data-description="sage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." data-devicewrapper="ipad ipad-portfolio">
+										<img src="images/thumbs/5.jpg" alt="img05"/>
+									</a>
+								</li>
+								
+								
+								<li>
+									<a href="" data-largesrc="images/3.jpg" data-title="Old Age" data-description="sage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." data-devicewrapper="ipad">
+										<img src="images/thumbs/3.jpg" alt="img03"/>
+									</a>
+								</li>
+								<li>
+									<a href="" data-largesrc="images/4.jpg" data-title="New Age" data-description="sage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." data-devicewrapper="imac">
+										<img src="images/thumbs/4.jpg" alt="img04"/>
+									</a>
+								</li>
+								<li>
+									<a href="" data-largesrc="images/5.jpg" data-title="New Age" data-description="sage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." data-devicewrapper="ipad ipad-portfolio">
+										<img src="images/thumbs/5.jpg" alt="img05"/>
+									</a>
+								</li>
+								<li>
+									<a href="" data-largesrc="images/1.jpg" data-title="Trophy application" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." data-devicewrapper="macbook">
+										<img src="images/thumbs/1.jpg" alt="img01"/>
+									</a>
+								</li>						
+								<li>
+									<a href="" data-largesrc="images/2.jpg" data-title="Circle App" data-description="sage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." data-devicewrapper="iphone iphone-portfolio">
+										<img src="images/thumbs/2.jpg" alt="img02"/>
+									</a>
+								</li>
+								<li>
+									<a href="" data-largesrc="images/3.jpg" data-title="Old Age" data-description="sage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." data-devicewrapper="ipad">
+										<img src="images/thumbs/3.jpg" alt="img03"/>
+									</a>
+								</li>
+								<li>
+									<a href="" data-largesrc="images/4.jpg" data-title="New Age" data-description="sage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." data-devicewrapper="imac">
+										<img src="images/thumbs/4.jpg" alt="img04"/>
+									</a>
+								</li>
+								<li>
+									<a href="" data-largesrc="images/5.jpg" data-title="New Age" data-description="sage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot." data-devicewrapper="ipad ipad-portfolio">
+										<img src="images/thumbs/5.jpg" alt="img05"/>
+									</a>
+								</li>
+							</ul>
+								
+						</div>
+					</div><!-- Section - Portfolio  (END) -->
+					
+					<div class="bb-item" id="contact"><!-- Section intro (START) -->
+						<div class="content">
+							<div class="scroller">
+							
+								<h1 class="text-center"><i class="ion-ios-chatboxes-outline"></i></h1>
+								<h1 class="uppercase text-center">Contact me</h1>
+								<h2 class="uppercase text-center">Lets work together</h2>
+								<hr class="hr-small center">
+								
+								<div class="container">
+									<div class="row">
+										<div class="col-md-8 col-md-offset-2">
+										
+											<span class="input">
+												<input class="input-field input-field-buk" type="text" id="input-1">
+												<label class="input-label input-label-buk input-label-border-buk-color-2" for="input-1">
+													<span class="input-label-content input-label-content-buk">First name</span>
+												</label>
+											</span>
+											
+											<span class="input">
+												<input class="input-field input-field-buk" type="text" id="input-2">
+												<label class="input-label input-label-buk input-label-border-buk-color-2" for="input-2">
+													<span class="input-label-content input-label-content-buk">Last name</span>
+												</label>
+											</span>
+											
+											<span class="input">
+												<input class="input-field input-field-buk" type="text" id="input-3">
+												<label class="input-label input-label-buk input-label-border-buk-color-2" for="input-3">
+													<span class="input-label-content input-label-content-buk">Email address</span>
+												</label>
+											</span>
+											
+											<textarea class="input-label-buk-color-2 textarea input-field textarea-border-color-2" id="contact-textarea" placeholder="What do you want to say?"></textarea>
+											<input type="submit" class="btn-theme btn-green btn-more-radius" value="Sent message">
+											
+											<div class="spacing"></div>											
+											<hr class="mbzero">
+										</div>
+									</div>
+									
+									<div class="row">
+										<div class="col-md-4 col-md-offset-2 right-vertical-hr" style="padding: 0px;">
+											<h2 class="text-center mt mbzero"><i class="ion-ios-navigate-outline"></i></h2>
+											<h2 class="text-center mtzero">My bunker</h3>
+											<hr>
+											<div class="google-maps" style="margin: 5px;">
+												<iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=St.%20Helen's%20High%20School%2C%20Dera%20Ismail%20Khan%2C%20Khyber%20Pakhtunkhwa%2C%20Pakistan&amp;key=AIzaSyAmFiq9wGL-yStLdklcCS50fvsjTID6vfY"></iframe>
+											</div>
+										</div>
+										<div class="col-md-4"style="padding: 0px;">
+											<div class="extra-details">
+												<h2 class="text-center mt mbzero"><i class="ion-ios-paper-outline"></i></h2>
+												<h2 class="text-center mtzero">Lorem info</h2>
+												<hr>
+												<p class="text-center"><i class="ion-ios-email-outline"></i> monibttr@lol.com</p>
+												<p class="text-center"><i class="ion-ios-telephone-outline"></i> +92 0336 1078967</p>
+												<div class="col-md-7 col-md-offset-3">
+												<div class="social-item">
+													<a href="" class="social-icon--pintrest"><i class="icon--pintrest"></i></a>
+												</div>
+												<div class="social-item">
+													<a href="" class="social-icon--twitter"><i class="icon--twitter"></i></a>
+												</div>
+												<div class="social-item">
+													<a href="" class="social-icon--github"><i class="icon--github"></i></a>
+												</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div><!-- Section intro (END) -->					
+				</div><!--bb-bookblock (END) -->
+			</div><!--bb-custom-wrapper (END) -->
+			
+			<span id="tblcontents" class="menu-button">Buk</span>
+			
+		</div>
+				
+		</div><!-- /containerbuk -->
+		
+		<script src="js/jquery.min.js"></script>
+		
+		<script src="buk/js/jquery.interactive_bg.js"></script>
+		
+		<script src="buk/js/Chart.js"></script>
+				
+		<script src="js/bootstrap.js"></script>
+
+		<script src="buk/js/jquery.mousewheel.js"></script>
+		
+		<script src="buk/js/jquery.jscrollpane.min.js"></script>
+		
+		<script src="buk/js/jquerypp.js"></script>
+				
+		<script src="buk/js/jquery.bookblock.js"></script>
+		
+		<script src="buk/js/page.js"></script>
+				
+		<script src="buk/js/portfolio-grid.js"></script>
+		
+		<script src="buk/js/imagesloaded.pkgd.js"></script>
+		
+		<script src="buk/js/jquery.cycle2.min.js"></script>
+		
+		<script src="buk/js/main.js"></script>
+	
+	</body>
+</html>
